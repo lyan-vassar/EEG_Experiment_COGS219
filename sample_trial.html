@@ -12,7 +12,7 @@
     <style>
         .jspsych-display-element {
         font-size: 60px;
-        font-family: Helvetica, Arial;
+        font-family: "Helvetica", Arial;
     }
     </style>
 </head>
@@ -72,7 +72,7 @@
 
     var fixation = {
         type: jsPsychHtmlKeyboardResponse,
-        stimulus: "<div style='font-size:60px;'>+</div>",
+        stimulus: "+",
         choices: "NO_KEYS",
         trial_duration: 2000,
         on_finish: function () {
@@ -127,7 +127,7 @@
 
     var question_mark = {
         type: jsPsychHtmlKeyboardResponse,
-        stimulus: "<div style='font_size:60px; color:blue;'>?</div>",
+        stimulus: "<div style='color:blue;'>?</div>",
         choices: "NO_KEYS",
         trial_duration: 2000,
     }
