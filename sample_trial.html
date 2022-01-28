@@ -9,6 +9,11 @@
 
     <script src="jokes.js"></script>
     <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
+    <style>
+        .jspsych-display-element {
+        font-size: 60px;
+    }
+    </style>
 </head>
 
 <body></body>
@@ -106,7 +111,14 @@
 
     var test = {
         type: jsPsychHtmlKeyboardResponse,
-        stimulus: jsPsych.timelineVariable("Joke ending"),
+        stimulus: function(){
+            var rand_choice = jsPsych.randomization.randomInt(0,1);
+            if (rand_choice == 0) {
+                return jsPsych.timelineVariable("Joke ending");
+            } else {
+                return jsPsych.timelineVariable("Nonjoke ending");
+            }
+        },
         choices: "NO_KEYS",
         trial_duration: 1000,
         post_trial_gap: 2500
