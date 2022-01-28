@@ -64,13 +64,6 @@
     var joke_words = [];
     var i = 0;
 
-    var fixation_simple = {
-        type: jsPsychHtmlKeyboardResponse,
-        stimulus: "<div_style='font_size:60px;'>+</div>",
-        choices: "NO_KEYS",
-        trial_duration: 2000
-    }
-
     var fixation = {
         type: jsPsychHtmlKeyboardResponse,
         stimulus: "<div_style='font_size:60px;'>+</div>",
@@ -93,7 +86,10 @@
                         return joke_words[i];
                     },
                     choices: "NO_KEYS",
-                    trial_duration: 400 // may have to change
+                    trial_duration: function()
+                    {
+                        return 200 + (32 * joke_words[i].length);
+                    } 
                 }],
                 loop_function: function () {
                     i++;
@@ -112,7 +108,15 @@
         type: jsPsychHtmlKeyboardResponse,
         stimulus: jsPsych.timelineVariable("Joke ending"),
         choices: "NO_KEYS",
-        trial_duration: 1000
+        trial_duration: 1000,
+        post_trial_gap: 2500
+    }
+
+    var question_mark = {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: "<div_style='font_size:60px;'>+</div>",
+        choices: "NO_KEYS",
+        trial_duration: 2000,
     }
 
     var question = {
@@ -123,15 +127,17 @@
             task: "response",
             correct_response: jsPsych.timelineVariable("correct_response")
         },
+        trial_duration: 4000,
         on_finish: function (data) {
             data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response)
             // if not case sensitive can just use: 
             //"data.correct = data.response === data.correct_response;"
-        }
+        },
+        post_trial_gap: 2000
     }
 
     var test_procedure = {
-        timeline: [fixation, joke_loop, test, fixation_simple, question],
+        timeline: [fixation, joke_loop, test, question_mark, question],
         timeline_variables: test_stimuli,
         randomize_order: true
     }
