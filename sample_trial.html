@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Experiment</title>
+    <script src="jspsych/jspsych.js"></script>
+    <script src="jspsych/plugin-html-keyboard-response.js"></script>
+    <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body></body>
+  <script>
+    var jsPsych = initJsPsych();
+    var timeline = [];
+
+    var sentences = "I still miss my ex-wife, but I am improving my".split(" ");
+
+    var test_stimuli = [
+        {stimulus: "aim", question: "I am shooting my ex-wife.", correct_response: "y"},
+        {stimulus: "ego", question: "I am starting to feel better about myself.", correct_response: "y"}
+    ];
+
+    var question_stimuli = [
+        {question: "I am shooting my ex-wife.", correct_response: "y"},
+        {question: "I am starting to feel better about myself", correct_response: "y"}
+    ]
+
+    var welcome = { //welcome message
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: "Welcome to the experiment. Press any key to begin."
+    }
+    
+    timeline.push(welcome);
+
+    var fixation = {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: "<div_style='font_size:60px;'>+</div>",
+        choices: "NO_KEYS",
+        trial_duration: 1000
+    }
+
+    timeline.push(fixation);
+
+    var present_sentence = {
+        type: jsPsychHtmlKeyboardResponse,
+        timeline: [{stimulus: "I"}, {stimulus: "still"}, {stimulus: "miss"}, {stimulus: "my"}, 
+          {stimulus: "ex-wife,"}, {stimulus: "but"}, {stimulus: "I"}, {stimulus: "am"}, 
+          {stimulus: "improving"}, {stimulus: "my"}],
+        choices: "NO_KEYS",
+        trial_duration: 400 // may have to change
+    }
+
+    timeline.push(present_sentence);
+
+    var test = {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: jsPsych.timelineVariable("stimulus"),
+        choices: "NO_KEYS",
+        trial_duration: 1000
+    }
+
+    var question = {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: jsPsych.timelineVariable("question"),
+        choices: ["y", "n"],
+        data: {
+          task: "response",
+          correct_response: jsPsych.timelineVariable("correct_response")
+        },
+        on_finish: function(data){
+            data.correct = jsPsych.pluginAPI.compareKeys(data.response, data.correct_response)
+            // if not case sensitive can just use: 
+            //"data.correct = data.response === data.correct_response;"
+        }
+    }
+
+    var test_procedure = {
+        timeline: [fixation, test, fixation, question],
+        timeline_variables: test_stimuli,
+        randomize_order: true
+    }
+
+    timeline.push(test_procedure);
+
+    var debrief_block = {
+        type: jsPsychHtmlKeyboardResponse,
+        stimulus: function(){
+            var trials = jsPsych.data.get().filter({task: "response"});
+            var correct_trials = trials.filter({correct: true});
+            var accuracy = Math.round(correct_trials.count()/trials.count()*100);
+            //var rt = Math.round(correct_trials.select("rt").mean());
+
+            return `<p>You responded correctly on ${accuracy}% of the trials.</p> <p>Press any key to complete the experiment. Thank you!</p>`;
+        }
+    }
+
+    timeline.push(debrief_block);
+
+    jsPsych.run(timeline);
+
+  </script>
+</html>
