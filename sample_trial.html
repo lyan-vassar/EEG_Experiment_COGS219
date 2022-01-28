@@ -121,8 +121,8 @@
     }
 
     var num_of_trials = 60
-    const array0 = new Array(30).fill(false);
-    const array1 = new Array(30).fill(true);
+    const array0 = new Array(num_of_trials/2).fill(false);
+    const array1 = new Array(num_of_trials/2).fill(true);
     var left_right_array = array0.concat(array1);
     shuffleArray(left_right_array);
     var lr = 0;
@@ -139,16 +139,16 @@
 
             if (isRight) {
                 if (rand_choice == 0) {
-                    return <span style="float:left;">jsPsych.timelineVariable("Joke ending")</span>;
+                    return `<span style="position:absolute; left: calc(50% + 89px);">${jsPsych.timelineVariable("Joke ending")}</span>`;
                 } else {
-                    return jsPsych.timelineVariable("Nonjoke ending");
+                    return `<span style="position:absolute; left: calc(50% + 89px);">${jsPsych.timelineVariable("Nonjoke ending")}</span>`;
                 }
             }
             else {
                 if (rand_choice == 0) {
-                    return jsPsych.timelineVariable("Joke ending");
+                    return `<span style="position:absolute; left: calc(50% + 89px);">${jsPsych.timelineVariable("Joke ending")}</span>`;
                 } else {
-                    return jsPsych.timelineVariable("Nonjoke ending");
+                    return `<span style="position:absolute; left: calc(50% + 89px);">${jsPsych.timelineVariable("Nonjoke ending")}</span>`;
                 }
             }
         },
