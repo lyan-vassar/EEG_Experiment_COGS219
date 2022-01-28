@@ -43,7 +43,7 @@
         auto_preload: true
     }
 
-    var sentences = "I still miss my ex-wife, but I am improving my".split(" ");
+    //var sentences = "I still miss my ex-wife, but I am improving my".split(" ");
 
     // var test_stimuli = [
     //     { stimulus: "aim", question: "I am shooting my ex-wife.", correct_response: "y" },
@@ -76,7 +76,7 @@
         choices: "NO_KEYS",
         trial_duration: 2000,
         on_finish: function () {
-            joke = jsPsych.timelineVariable("Joke")
+            joke = jsPsych.timelineVariable("Joke stem")
             //joke = "joke funny haha"
             joke_words = joke.split(" ")
             console.log(joke)
@@ -134,7 +134,14 @@
 
     var question = {
         type: jsPsychHtmlKeyboardResponse,
-        stimulus: jsPsych.timelineVariable("question"),
+        stimulus: function(){
+            var rand_choice = jsPsych.randomization.randomInt(0,1);
+            if (rand_choice == 0) {
+                return jsPsych.timelineVariable("JokeQuestion");
+            } else {
+                return jsPsych.timelineVariable("NonjokeQuestion");
+            }
+        },
         choices: ["y", "n"],
         data: {
             task: "response",
