@@ -11,9 +11,9 @@
     <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
     <style>
         .jspsych-display-element {
-        font-size: 60px;
-        font-family: "Helvetica", Arial;
-    }
+            font-size: 60px;
+            font-family: "Helvetica", Arial;
+        }
     </style>
 </head>
 
@@ -26,10 +26,10 @@
         use_webaudio: false,
         //I want to see how the data looks like when the experiment is over
         //so I include this function to see the data "on_finish"
-        on_finish: function(){
-          jsPsych.data.displayData();
+        on_finish: function () {
+            jsPsych.data.displayData();
         }
-      });
+    });
 
     //This is the timeline where we will add all the javascript variables
     //(the trials and instrucitons and whatnot) so they can appear on the
@@ -43,7 +43,7 @@
         auto_preload: true
     }
 
-     //var sentences = "I still miss my ex-wife, but I am improving my".split(" ");
+    //var sentences = "I still miss my ex-wife, but I am improving my".split(" ");
 
     // var test_stimuli = [
     //     { stimulus: "aim", question: "I am shooting my ex-wife.", correct_response: "y" },
@@ -86,37 +86,50 @@
 
     // console.log(joke_words)
     var joke_loop = {
-                timeline: [{
-                    type: jsPsychHtmlKeyboardResponse,
-                    stimulus: function () {
-                        return joke_words[i];
-                    },
-                    choices: "NO_KEYS",
-                    trial_duration: function()
-                    {
-                        return 200 + (32 * joke_words[i].length);
-                    } 
-                }],
-                loop_function: function () {
-                    i++;
-                    if (i < joke_words.length) {
-                        return true;
-                    } else {
-                        joke = "";
-                        joke_words = [];
-                        i = 0;
-                        return false;
-                    }
-                }
+        timeline: [{
+            type: jsPsychHtmlKeyboardResponse,
+            stimulus: function () {
+                return joke_words[i];
+            },
+            choices: "NO_KEYS",
+            trial_duration: function () {
+                return 200 + (32 * joke_words[i].length);
             }
+        }],
+        loop_function: function () {
+            i++;
+            if (i < joke_words.length) {
+                return true;
+            } else {
+                joke = "";
+                joke_words = [];
+                i = 0;
+                return false;
+            }
+        }
+    }
 
 
+    /* Randomize array in-place using Durstenfeld shuffle algorithm */
+    function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
 
+    var num_of_trials = 60
+    const array0 = new Array(30).fill(0);
+    const array1 = new Array(30).fill(1);
+    var left_right_array = array0.concat(array1);
+    shuffleArray(left_right_array);
 
     var test = {
         type: jsPsychHtmlKeyboardResponse,
-        stimulus: function(){
-            var rand_choice = jsPsych.randomization.randomInt(0,1);
+        stimulus: function () {
+            var rand_choice = jsPsych.randomization.randomInt(0, 1);
             if (rand_choice == 0) {
                 return jsPsych.timelineVariable("Joke ending");
             } else {
@@ -137,8 +150,8 @@
 
     var question = {
         type: jsPsychHtmlKeyboardResponse,
-        stimulus: function(){
-            var rand_choice = jsPsych.randomization.randomInt(0,1);
+        stimulus: function () {
+            var rand_choice = jsPsych.randomization.randomInt(0, 1);
             if (rand_choice == 0) {
                 return jsPsych.timelineVariable("JokeQuestion");
             } else {
