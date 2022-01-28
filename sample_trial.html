@@ -39,11 +39,13 @@
 
     timeline.push(fixation);
 
+    var textt = [{stimulus: "I"}, {stimulus: "still"}, {stimulus: "miss"}, {stimulus: "my"}, 
+          {stimulus: "ex-wife,"}, {stimulus: "but"}, {stimulus: "I"}, {stimulus: "am"}, 
+          {stimulus: "improving"}, {stimulus: "my"}]
+
     var present_sentence = {
         type: jsPsychHtmlKeyboardResponse,
-        timeline: [{stimulus: "I"}, {stimulus: "still"}, {stimulus: "miss"}, {stimulus: "my"}, 
-          {stimulus: "ex-wife,"}, {stimulus: "but"}, {stimulus: "I"}, {stimulus: "am"}, 
-          {stimulus: "improving"}, {stimulus: "my"}],
+        timeline: textt,
         choices: "NO_KEYS",
         trial_duration: 400 // may have to change
     }
