@@ -2,22 +2,28 @@
 <html>
 
 <head>
-    <title>EEG Experiment</title>
+    <title>Hemispheric Asymmetries and Joke Comprehension</title>
     <script src="jspsych/jspsych.js"></script>
     <script src="jspsych/plugin-html-keyboard-response.js"></script>
     <script src="jspsych/plugin-preload.js"></script>
 
     <script src="jokes2.js"></script>
+
+    <!-- stylesheet from the library-->
     <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
+
     <style>
         .jspsych-display-element {
             font-size: 60px;
             font-family: "Helvetica", Arial;
         }
     </style>
+
 </head>
 
 <body></body>
+<style></style>
+
 <script>
 
     //We initialize the JsPsych here
@@ -43,31 +49,18 @@
         auto_preload: true
     }
 
-    //var sentences = "I still miss my ex-wife, but I am improving my".split(" ");
-
-    // var test_stimuli = [
-    //     { stimulus: "aim", question: "I am shooting my ex-wife.", correct_response: "y" },
-    //     { stimulus: "ego", question: "I am starting to feel better about myself.", correct_response: "y" }
-    // ];
-
-    var question_stimuli = [
-        { question: "I am shooting my ex-wife.", correct_response: "y" },
-        { question: "I am starting to feel better about myself", correct_response: "y" }
-    ]
-
-    var textt = [{ stimulus: "I" }, { stimulus: "still" }, { stimulus: "miss" }, { stimulus: "my" },
-    { stimulus: "ex-wife," }, { stimulus: "but" }, { stimulus: "I" }, { stimulus: "am" },
-    { stimulus: "improving" }, { stimulus: "my" }]
-
-    var welcome = { //welcome message
+    //welcome message
+    var welcome = {
         type: jsPsychHtmlKeyboardResponse,
-        stimulus: "Welcome to the experiment. Press any key to begin."
+        stimulus: "Welcome to our EEG Experiment. Press any key to begin."
     }
 
     timeline.push(welcome);
 
+    //initialize the joke sentence and the words
     var joke = "";
     var joke_words = [];
+    //initialize the counter
     var i = 0;
 
     var fixation = {
@@ -77,14 +70,10 @@
         trial_duration: 2000,
         on_finish: function () {
             joke = jsPsych.timelineVariable("Joke stem")
-            //joke = "joke funny haha"
             joke_words = joke.split(" ")
-            console.log(joke)
-
         }
     }
 
-    // console.log(joke_words)
     var joke_loop = {
         timeline: [{
             type: jsPsychHtmlKeyboardResponse,
@@ -93,9 +82,11 @@
             },
             choices: "NO_KEYS",
             trial_duration: function () {
+                //from the pair
                 return 200 + (32 * joke_words[i].length);
             }
         }],
+
         loop_function: function () {
             i++;
             if (i < joke_words.length) {
@@ -111,6 +102,7 @@
 
 
     /* Randomize array in-place using Durstenfeld shuffle algorithm */
+    //Found online and utilized here:)
     function shuffleArray(array) {
         for (var i = array.length - 1; i > 0; i--) {
             var j = Math.floor(Math.random() * (i + 1));
@@ -121,8 +113,8 @@
     }
 
     var num_of_trials = 60
-    const array0 = new Array(num_of_trials/2).fill(false);
-    const array1 = new Array(num_of_trials/2).fill(true);
+    const array0 = new Array(num_of_trials / 2).fill(false);
+    const array1 = new Array(num_of_trials / 2).fill(true);
     var left_right_array = array0.concat(array1);
     shuffleArray(left_right_array);
     var lr = 0;
@@ -137,18 +129,48 @@
         stimulus: function () {
             var rand_choice = jsPsych.randomization.randomInt(0, 1);
 
+            var returnRightJoke = `<div
+                        style="position: fixed;
+                               left: 50%;
+                               top: 50%;
+                               transform: translate(-50%, -50%);">+</div>
+
+                        <div style="transform: translateX(5em);">${jsPsych.timelineVariable("Nonjoke ending")}</div>`
+
+            var returnRightNonjoke = `<div
+                        style="position: fixed;
+                               left: 50%;
+                               top: 50%;
+                               transform: translate(-50%, -50%);">+</div>
+
+                        <div style="transform: translateX(5em);">${jsPsych.timelineVariable("Nonjoke ending")}</div>`
+            var returnLeftJoke = `<div
+                        style="position: fixed;
+                               left: 50%;
+                               top: 50%;
+                               transform: translate(-50%, -50%);">+</div>
+
+                        <div style="transform: translateX(-5em);">${jsPsych.timelineVariable("Nonjoke ending")}</div>`
+            var returnLeftNonjoke = `<div
+                        style="position: fixed;
+                               left: 50%;
+                               top: 50%;
+                               transform: translate(-50%, -50%);">+</div>
+
+                        <div style="transform: translateX(-5em);">${jsPsych.timelineVariable("Nonjoke ending")}</div>`
+
             if (isRight) {
                 if (rand_choice == 0) {
-                    return `<span style="position:absolute; left: calc(50% + 89px);">${jsPsych.timelineVariable("Joke ending")}</span>`;
+                    return returnRightJoke;
                 } else {
-                    return `<span style="position:absolute; left: calc(50% + 89px);">${jsPsych.timelineVariable("Nonjoke ending")}</span>`;
+                    return returnRightNonjoke;
                 }
             }
             else {
                 if (rand_choice == 0) {
-                    return `<span style="position:absolute; left: calc(50% + 89px);">${jsPsych.timelineVariable("Joke ending")}</span>`;
+                    return returnLeftJoke;
                 } else {
-                    return `<span style="position:absolute; left: calc(50% + 89px);">${jsPsych.timelineVariable("Nonjoke ending")}</span>`;
+                    return returnLeftNonjoke;
                 }
             }
         },
