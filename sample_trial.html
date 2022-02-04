@@ -60,11 +60,11 @@
         on_finish: function(data) {
             list_ID = data.response.Q1;
             if (list_ID >= 1 && list_ID <= 4) {
-                test_stimuli = test_stimuli[list_ID-1];
+                test_procedure["timeline_variables"] = test_stimuli_3;
             }
             else {
                 listID = jsPsych.randomization.randomInt(0, 3);
-                test_stimuli = test_stimuli[list_ID];
+                test_procedure["timeline_variables"] = test_stimuli_3;
             }
         }
     }
@@ -234,7 +234,7 @@
 
     var test_procedure = {
         timeline: [fixation, joke_loop, test, question_mark, question],
-        timeline_variables: test_stimuli,
+        timeline_variables: test_stimuli_1,
         randomize_order: true
     }
 
