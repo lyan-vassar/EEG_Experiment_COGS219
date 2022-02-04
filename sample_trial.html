@@ -135,7 +135,7 @@
                                top: 50%;
                                transform: translate(-50%, -50%);">+</div>
 
-                        <div style="transform: translateX(5em);">${jsPsych.timelineVariable("Joke ending")}</div>`
+                        <div style="transform: translateX(5em + 89px);">${jsPsych.timelineVariable("Joke ending")}</div>`
 
             var returnRightNonjoke = `<div
             style="position: fixed;
@@ -143,21 +143,21 @@
                                top: 50%;
                                transform: translate(-50%, -50%);">+</div>
 
-                        <div style="transform: translateX(5em);">${jsPsych.timelineVariable("Nonjoke ending")}</div>`
+                        <div style="transform: translateX(5em + 89px);">${jsPsych.timelineVariable("Nonjoke ending")}</div>`
             var returnLeftJoke = `<div
             style="position: fixed;
                                left: 50%;
                                top: 50%;
                                transform: translate(-50%, -50%);">+</div>
 
-                        <div style="transform: translateX(-5em);">${jsPsych.timelineVariable("Joke ending")}</div>`
+                        <div style="transform: translateX(-(5em + 89px));">${jsPsych.timelineVariable("Joke ending")}</div>`
             var returnLeftNonjoke = `<div
             style="position: fixed;
                                left: 50%;
                                top: 50%;
                                transform: translate(-50%, -50%);">+</div>
 
-                        <div style="transform: translateX(-5em);">${jsPsych.timelineVariable("Nonjoke ending")}</div>`
+                        <div style="transform: translateX(-(5em + 89px));">${jsPsych.timelineVariable("Nonjoke ending")}</div>`
 
             if (left_or_right) {
                 if (rand_choice == 0) {
