@@ -117,18 +117,18 @@
     const array1 = new Array(num_of_trials / 2).fill(true);
     var left_right_array = array0.concat(array1);
     shuffleArray(left_right_array);
-    var left_or_right = 0;
-    var index = 0;
+    var lr = 0;
+    isRight = false;
 
     var test = {
         on_start: function () {
-            left_or_right = left_right_array[index];
-            index++;
+            left_or_right = left_right_array[lr];
+            lr++;
         },
         type: jsPsychHtmlKeyboardResponse,
         stimulus: function () {
             var rand_choice = jsPsych.randomization.randomInt(0, 1);
-            console.log(rand_choice);
+
             var returnRightJoke = `<div
             style="position: fixed;
                                left: 50%;
@@ -159,7 +159,7 @@
 
                         <div style="transform: translateX(-(5em + 89px));">${jsPsych.timelineVariable("Nonjoke ending")}</div>`
 
-            if (left_or_right) {
+            if (isRight) {
                 if (rand_choice == 0) {
                     return returnRightJoke;
                 } else {
