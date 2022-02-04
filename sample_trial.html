@@ -6,6 +6,7 @@
     <script src="jspsych/jspsych.js"></script>
     <script src="jspsych/plugin-html-keyboard-response.js"></script>
     <script src="jspsych/plugin-preload.js"></script>
+    <script src="jspsych/plugin-survey-text.js"></script>
 
     <script src="jokes2.js"></script>
 
@@ -48,6 +49,27 @@
         type: jsPsychPreload,
         auto_preload: true
     }
+
+    // researcher input
+    var researchInput = {
+        type: jsPsychSurveyText,
+        questions: [
+            {prompt: "Participant ID: ", required: true},
+            {prompt: "List #", required: true}
+        ],
+        on_finish: function(data) {
+            list_ID = data.response.Q1;
+            if (list_ID >= 1 && list_ID <= 4) {
+                test_stimuli = test_stimuli[list_ID-1];
+            }
+            else {
+                listID = jsPsych.randomization.randomInt(0, 3);
+                test_stimuli = test_stimuli[list_ID];
+            }
+        }
+    }
+
+    timeline.push(researchInput);
 
     //welcome message
     var welcome = {
