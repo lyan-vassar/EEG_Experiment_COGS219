@@ -143,7 +143,6 @@
     var left_right_array = array0.concat(array1);
     shuffleArray(left_right_array);
     var lr = 0;
-    isRight = false;
 
     var test = {
         on_load: () => {
@@ -153,37 +152,36 @@
                 )}`
             );
         },
-        on_start: function () {
-            left_or_right = left_right_array[lr];
-            lr++;
-        },
+
         type: jsPsychHtmlKeyboardResponse,
         stimulus: function () {
             var rand_choice = jsPsych.randomization.randomInt(0, 1);
 
-            var returnRightJoke = `<div style="position:relative; width:400px; height: 40px; background-color:transparent;">
-<p style="position:absolute; width:400px; text-align: center; margin:0;">+</p>
-<p style="position:absolute; left: calc(50% + 89px); margin:0;">${jsPsych.timelineVariable("Nonjoke ending")}</p>
-</div>`
+            var returnRightJoke = `<div style="position:relative; width:800px; height:60px; line-height:60px">
+                <p style="position:absolute; width:800px; text-align:center; margin:0;">+</p>
+                <p style="position:absolute; left: calc(50% + 89px); margin:0;">${jsPsych.timelineVariable("Joke ending")}</p>
+                </div>`
 
-            var returnRightNonjoke = `<div style="position:relative; width:400px; height: 40px; background-color:transparent;">
-<p style="position:absolute; width:400px; text-align: center; margin:0;">+</p>
-<p style="position:absolute; left: calc(50% + 89px); margin:0;">${jsPsych.timelineVariable("Nonjoke ending")}</p>
-</div>`
+            var returnRightNonjoke = `<div style="position:relative; width:800px; height:60px; line-height:60px;">
+                <p style="position:absolute; width:800px; text-align:center; margin:0;">+</p>
+                <p style="position:absolute; left:calc(50% + 89px); margin:0;">${jsPsych.timelineVariable("Nonjoke ending")}</p>
+                </div>`
 
-            var returnLeftJoke = `<div style="position:relative; width:400px; height: 40px; background-color:transparent;">
-<p style="position:absolute; width:400px; text-align: center; margin:0;">+</p>
-<p style="position:absolute; left: calc(50% + 89px); margin:0;">${jsPsych.timelineVariable("Nonjoke ending")}</p>
-</div>`
+            var returnLeftJoke = `<div style="position:relative; width:800px; height:60px; line-height:60px;">
+                <p style="position:absolute; width:800px; text-align:center; margin:0;">+</p>
+                <p style="position:absolute; right:calc(50% + 89px); margin:0;">${jsPsych.timelineVariable("Joke ending")}</p>
+                </div>`
 
-            var returnLeftNonjoke =
-                `<div style="position:relative; width:400px; height: 40px; background-color:transparent;">
-<p style="position:absolute; width:400px; text-align: center; margin:0;">+</p>
-<p style="position:absolute; left: calc(50% + 89px); margin:0;">${jsPsych.timelineVariable("Nonjoke ending")}</p>
-</div>`
+            var returnLeftNonjoke = `<div style="position:relative; width:800px; height:60px; line-height:60px;">
+                <p style="position:absolute; width:800px; text-align:center; margin:0;">+</p>
+                <p style="position:absolute; right:calc(50% + 89px); margin:0;">${jsPsych.timelineVariable("Nonjoke ending")}</p>
+                </div>`
 
 
-            if (isRight) {
+            left_or_right = left_right_array[lr];
+            lr++;
+
+            if (left_or_right) {
                 if (rand_choice == 0) {
                     return returnRightJoke;
                 } else {
