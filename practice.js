@@ -1,6 +1,6 @@
  practice_questions = [
   {
-    Sentence_Stem : "The children ran outside to",
+    Sentence : "The children ran outside to",
     Completion: "play",
     Left_or_Right: "left",
     Question: "The children are playing.",
