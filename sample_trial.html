@@ -9,9 +9,6 @@
     <script src="jspsych/plugin-survey-text.js"></script>
 
     <script src="jokes1.js"></script>
-    <script src="jokes2.js"></script>
-    <script src="jokes3.js"></script>
-    <script src="jokes4.js"></script>
 
     <!-- stylesheet from the library-->
     <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
@@ -41,6 +38,12 @@
         }
     });
 
+    var urlvar = jsPsych.data.urlVariables();
+    //decides which list is going to be used, either 0, 1, 2, 3.
+    var selectedNumber = urlvar.list;
+    console.log(test_stimuli[selectedNumber]);
+
+
     //This is the timeline where we will add all the javascript variables
     //(the trials and instrucitons and whatnot) so they can appear on the
     //screen in chronological order
@@ -63,11 +66,11 @@
         on_finish: function(data) {
             list_ID = data.response.Q1;
             if (list_ID >= 1 && list_ID <= 4) {
-                test_procedure["timeline_variables"] = test_stimuli_3;
+                test_procedure["timeline_variables"] = test_stimuli[selectedNumber];
             }
             else {
                 listID = jsPsych.randomization.randomInt(0, 3);
-                test_procedure["timeline_variables"] = test_stimuli_3;
+                test_procedure["timeline_variables"] = test_stimuli[selectedNumber];
             }
         }
     }
@@ -235,9 +238,10 @@
 
     var test_procedure = {
         timeline: [fixation, joke_loop, test, question_mark, question],
-        timeline_variables: test_stimuli_1,
+        timeline_variables: test_stimuli[selectedNumber],
         randomize_order: true
     }
+
 
     timeline.push(test_procedure);
 
