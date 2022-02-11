@@ -16,6 +16,10 @@
     <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
 
     <style>
+        .jspsych-display-element {
+            font-size: 24px;
+            font-family: "Helvetica", Arial;
+        }
         .big-font {
             font-size: 60px;
             font-family: "Helvetica", Arial;
@@ -42,19 +46,14 @@
     // researcher input
     var researchInput = {
         type: jsPsychSurveyText,
+        preamble: 'Please enter the participant ID as a two digit number, e.g., 01',
         questions: [
             {prompt: "Participant ID: ", required: true},
-            {prompt: "List #", required: true}
         ],
         on_finish: function(data) {
-            list_ID = data.response.Q1;
-            if (list_ID >= 1 && list_ID <= 4) {
-                test_procedure["timeline_variables"] = test_stimuli[selectedNumber];
-            }
-            else {
-                listID = jsPsych.randomization.randomInt(0, 3);
-                test_procedure["timeline_variables"] = test_stimuli[selectedNumber];
-            }
+            jsPsych.data.addProperties({
+                subject_id: data.response.Q0
+            })
         }
     }
 
@@ -199,7 +198,7 @@
         timeline: [practice_instructions, practice_fixation, practice_loop, practice_trial, 
                     question_mark, practice_question, intermission, ask_to_repeat],
         loop_function: function(data){
-            if(jsPsych.pluginAPI.compareKeys(data.filter({task:"repeat"}).values()[0].response, "y")){
+            if(data.filter({task:"repeat"}).values()[0].response == "y"){
                 return true;
             } else {
                 return false;
@@ -324,7 +323,7 @@
     var question = {
         type: jsPsychHtmlKeyboardResponse,
         stimulus: jsPsych.timelineVariable("Question"),
-        choices: jsPsych.timelineVariable("Correct_Response"),
+        choices: ["y", "n"],
 
         //THIS IS WHERE WE STORE THE DATA
         
