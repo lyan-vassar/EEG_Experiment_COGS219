@@ -204,7 +204,7 @@
         timeline: [practice_instructions, practice_fixation, practice_loop, practice_trial, 
                     question_mark, practice_question, intermission, ask_to_repeat],
         loop_function: function(data){
-            if(jsPsych.pluginAPI.compareKeys(data.values()[0].response, 'y')){
+            if(jsPsych.pluginAPI.compareKeys(data.values()[0].response, "y")){
                 return true;
             } else {
                 return false;
