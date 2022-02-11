@@ -4,6 +4,7 @@
 <head>
     <title>Hemispheric Asymmetries and Joke Comprehension</title>
     <script src="jspsych/jspsych.js"></script>
+    <script src="jspsych/plugin-fullscreen.js"></script>
     <script src="jspsych/plugin-html-keyboard-response.js"></script>
     <script src="jspsych/plugin-preload.js"></script>
     <script src="jspsych/plugin-survey-text.js"></script>
@@ -33,8 +34,6 @@
     //decides which list is going to be used, either 0, 1, 2, 3.
     var selectedNumber = urlvar.list;
     
-
-
     //This is the timeline where we will add all the javascript variables
     //(the trials and instrucitons and whatnot) so they can appear on the
     //screen in chronological order
@@ -60,6 +59,13 @@
     }
 
     timeline.push(researchInput);
+
+    var enter_fullscreen = {
+        type: jsPsychFullscreen,
+        fullscreen_mode: true
+    }
+
+    timeline.push(enter_fullscreen);
 
     // welcome message
     var welcome = {
@@ -347,6 +353,8 @@
 
     timeline.push(test_procedure);
 
+    
+
     var debrief_block = {
         type: jsPsychHtmlKeyboardResponse,
         stimulus: function () {
@@ -360,6 +368,13 @@
     }
 
     timeline.push(debrief_block);
+
+    var exit_fullscreen = {
+        type: jsPsychFullscreen,
+        fullscreen_mode: false
+    }
+
+    timeline.push(exit_fullscreen);
 
     jsPsych.run(timeline);
 
