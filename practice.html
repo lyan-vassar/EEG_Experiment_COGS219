@@ -42,7 +42,7 @@
     var urlvar = jsPsych.data.urlVariables();
     //decides which list is going to be used, either 0, 1, 2, 3.
     var selectedNumber = urlvar.list;
-    console.log(test_stimuli[selectedNumber]);
+    //console.log(test_stimuli[selectedNumber]);
 
 
     //This is the timeline where we will add all the javascript variables
@@ -197,14 +197,17 @@
     var ask_to_repeat = {
         type: jsPsychHtmlKeyboardResponse,
         stimulus: "Would you like to repeat the practice session? Press 'y' for yes, and 'n' for no.",
-        choices: ["y", "n"]
+        choices: ["y", "n"],
+        data: {
+            task: "repeat"
+        }
     }
 
     var loop_node = {
         timeline: [practice_instructions, practice_fixation, practice_loop, practice_trial, 
                     question_mark, practice_question, intermission, ask_to_repeat],
         loop_function: function(data){
-            if(jsPsych.pluginAPI.compareKeys(data.values()[0].response, "y")){
+            if(jsPsych.pluginAPI.compareKeys(data.filter({task:"repeat"}).values()[0].response, "y")){
                 return true;
             } else {
                 return false;
