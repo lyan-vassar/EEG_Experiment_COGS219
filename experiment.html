@@ -95,7 +95,8 @@
         on_finish: function () {
             practice_sentence = jsPsych.timelineVariable("Sentence")
             practice_words = practice_sentence.split(" ")
-        }
+        },
+        css_classes: ['big-font']
     }
 
     var practice_loop = {
@@ -108,7 +109,8 @@
             trial_duration: function () {
                 //from the pair
                 return 200 + (32 * practice_words[i].length);
-            }
+            },
+            css_classes: ['big-font']
         }],
 
         loop_function: function () {
@@ -151,12 +153,13 @@
 
         choices: "NO_KEYS",
         trial_duration: 1000,
-        post_trial_gap: 2500
+        post_trial_gap: 2500,
+        css_classes: ['big-font']
     }
 
     var question_mark = {
         type: jsPsychHtmlKeyboardResponse,
-        stimulus: "<div style='color:blue;'>?</div>",
+        stimulus: "<div style='color:blue; font-size:128px;'>?</div>",
         choices: "NO_KEYS",
         trial_duration: 2000,
     }
@@ -235,7 +238,8 @@
         on_finish: function () {
             joke = jsPsych.timelineVariable("Sentence")
             joke_words = joke.split(" ")
-        }
+        },
+        css_classes: ['big-font']
     }
 
     var joke_loop = {
@@ -248,7 +252,8 @@
             trial_duration: function () {
                 //from the pair
                 return 200 + (32 * joke_words[i].length);
-            }
+            },
+            css_classes: ['big-font']
         }],
 
         loop_function: function () {
@@ -305,12 +310,13 @@
 
         choices: "NO_KEYS",
         trial_duration: 1000,
-        post_trial_gap: 2500
+        post_trial_gap: 2500,
+        css_classes: ['big-font']
     }
 
     var question_mark = {
         type: jsPsychHtmlKeyboardResponse,
-        stimulus: "<div style='color:blue;'>?</div>",
+        stimulus: "<div style='color:blue; font-size:128px;'>?</div>",
         choices: "NO_KEYS",
         trial_duration: 2000,
     }
@@ -328,13 +334,9 @@
             sentence: jsPsych.timelineVariable("Sentence"),
             ending: jsPsych.timelineVariable("Ending"),
             left_or_right: jsPsych.timelineVariable("Left_or_Right"),
-
-            type: jsPsych.timelineVariable("Sentence_Type"),
+            sentence_type: jsPsych.timelineVariable("Sentence_Type"),
             question: jsPsych.timelineVariable("Question"),
             correct_response: jsPsych.timelineVariable("Correct_Response"),
-
-
-
         },
         //trial_duration: 4000,
         on_finish: function (data) {
@@ -349,8 +351,6 @@
         timeline: [fixation, joke_loop, test, question_mark, question],
         timeline_variables: test_stimuli[selectedNumber],
     }
-
-
     timeline.push(test_procedure);
 
     
