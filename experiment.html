@@ -15,7 +15,7 @@
     <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
 
     <style>
-        .jspsych-display-element {
+        .big-font {
             font-size: 60px;
             font-family: "Helvetica", Arial;
         }
@@ -27,35 +27,18 @@
 <style></style>
 
 <script>
-
-    //We initialize the JsPsych here
-    var jsPsych = initJsPsych({
-        //we dont need audio so we disabled it
-        use_webaudio: false,
-        //I want to see how the data looks like when the experiment is over
-        //so I include this function to see the data "on_finish"
-        on_finish: function () {
-            jsPsych.data.displayData();
-        }
-    });
+    var jsPsych = initJsPsych({});
 
     var urlvar = jsPsych.data.urlVariables();
     //decides which list is going to be used, either 0, 1, 2, 3.
     var selectedNumber = urlvar.list;
-    //console.log(test_stimuli[selectedNumber]);
+    
 
 
     //This is the timeline where we will add all the javascript variables
     //(the trials and instrucitons and whatnot) so they can appear on the
     //screen in chronological order
     var timeline = []; //it is a variable and it is initialized as an empty list 
-
-    //we choose to preload all the data, whether it be audio, pictures, or
-    //text data beforehand so that the experiment does not lag in run time
-    var preload = {
-        type: jsPsychPreload,
-        auto_preload: true
-    }
 
     // researcher input
     var researchInput = {
