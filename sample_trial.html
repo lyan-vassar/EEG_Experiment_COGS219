@@ -60,10 +60,10 @@
     var researchInput = {
         type: jsPsychSurveyText,
         questions: [
-            {prompt: "Participant ID: ", required: true},
-            {prompt: "List #", required: true}
+            { prompt: "Participant ID: ", required: true },
+            { prompt: "List #", required: true }
         ],
-        on_finish: function(data) {
+        on_finish: function (data) {
             list_ID = data.response.Q1;
             if (list_ID >= 1 && list_ID <= 4) {
                 test_procedure["timeline_variables"] = test_stimuli[selectedNumber];
@@ -128,12 +128,13 @@
         }
     }
 
-    var num_of_trials = 60
-    const array0 = new Array(num_of_trials / 2).fill(false);
-    const array1 = new Array(num_of_trials / 2).fill(true);
-    var left_right_array = array0.concat(array1);
-    left_right_array = jsPsych.randomization.shuffle(left_right_array);
-    var lr = 0;
+    // var num_of_trials = 60
+
+    // const array0 = new Array(num_of_trials / 2).fill(false);
+    // const array1 = new Array(num_of_trials / 2).fill(true);
+    // var left_right_array = array0.concat(array1);
+    // left_right_array = jsPsych.randomization.shuffle(left_right_array);
+    // var lr = 0;
 
     var test = {
         on_load: () => {
@@ -146,45 +147,23 @@
 
         type: jsPsychHtmlKeyboardResponse,
         stimulus: function () {
-            var rand_choice = jsPsych.randomization.randomInt(0, 1);
+            var left_right_choice = jsPsych.timelineVariable("left_or_right");
 
-            var returnRightJoke = `<div style="position:relative; width:800px; height:60px; line-height:60px">
+            var leftEnding = `<div style="position:relative; width:800px; height:60px; line-height:60px">
                 <p style="position:absolute; width:800px; text-align:center; margin:0;">+</p>
-                <p style="position:absolute; left: calc(50% + 89px); margin:0;">${jsPsych.timelineVariable("Joke ending")}</p>
+                <p style="position:absolute; left: calc(50% + 89px); margin:0;">${jsPsych.timelineVariable("Ending")}</p>
                 </div>`
 
-            var returnRightNonjoke = `<div style="position:relative; width:800px; height:60px; line-height:60px;">
+            var rightEnding = `<div style="position:relative; width:800px; height:60px; line-height:60px;">
                 <p style="position:absolute; width:800px; text-align:center; margin:0;">+</p>
-                <p style="position:absolute; left:calc(50% + 89px); margin:0;">${jsPsych.timelineVariable("Nonjoke ending")}</p>
+                <p style="position:absolute; right:calc(50% + 89px); margin:0;">${jsPsych.timelineVariable("Ending")}</p>
                 </div>`
 
-            var returnLeftJoke = `<div style="position:relative; width:800px; height:60px; line-height:60px;">
-                <p style="position:absolute; width:800px; text-align:center; margin:0;">+</p>
-                <p style="position:absolute; right:calc(50% + 89px); margin:0;">${jsPsych.timelineVariable("Joke ending")}</p>
-                </div>`
-
-            var returnLeftNonjoke = `<div style="position:relative; width:800px; height:60px; line-height:60px;">
-                <p style="position:absolute; width:800px; text-align:center; margin:0;">+</p>
-                <p style="position:absolute; right:calc(50% + 89px); margin:0;">${jsPsych.timelineVariable("Nonjoke ending")}</p>
-                </div>`
-
-
-            left_or_right = left_right_array[lr];
-            lr++;
-
-            if (left_or_right) {
-                if (rand_choice == 0) {
-                    return returnRightJoke;
-                } else {
-                    return returnRightNonjoke;
-                }
+            if (left_or_right_choice = "left") {
+                return leftEnding;
             }
             else {
-                if (rand_choice == 1) {
-                    return returnLeftJoke;
-                } else {
-                    return returnLeftNonjoke;
-                }
+                return rightEnding;
             }
         },
 
@@ -202,18 +181,21 @@
 
     var question = {
         type: jsPsychHtmlKeyboardResponse,
-        stimulus: function () {
-            var rand_choice = jsPsych.randomization.randomInt(0, 1);
-            if (rand_choice == 0) {
-                return jsPsych.timelineVariable("JokeQuestion");
-            } else {
-                return jsPsych.timelineVariable("NonjokeQuestion");
-            }
-        },
-        choices: ["y", "n"],
+        stimulus: jsPsych.timelineVariable("Question"),
+        choices: jsPsych.timelineVariable("Correct_Response"),
         data: {
             task: "response",
-            correct_response: jsPsych.timelineVariable("correct_response")
+            id: jsPsych.timelineVariable("Id"),
+            sentence: jsPsych.timelineVariable("Sentence"),
+            ending: jsPsych.timelineVariable("Ending"),
+            left_or_right: jsPsych.timelineVariable("left_or_right"),
+
+            type: jsPsych.timelineVariable("Type"),
+            question: jsPsych.timelineVariable("Question"),
+            correct_response: jsPsych.timelineVariable("Correct_Response"),
+
+
+
         },
         //trial_duration: 4000,
         on_finish: function (data) {
