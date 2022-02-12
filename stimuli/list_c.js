@@ -8,6 +8,7 @@ var list_c = [
     question: "The train will be late if doesn't stop at Grand Central.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 51,
@@ -17,6 +18,7 @@ var list_c = [
     question: "The church is particularly supportive of Mormons.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 199,
@@ -26,6 +28,7 @@ var list_c = [
     question: "The children were outdoors.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 149,
@@ -35,6 +38,7 @@ var list_c = [
     question: "Money is the only way to guarantee success.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 24,
@@ -45,6 +49,7 @@ var list_c = [
     question: "You should use detergent to clean shirts.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 234,
@@ -54,6 +59,7 @@ var list_c = [
     question: "A flat tire did not stop Katie from driving.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 81,
@@ -65,6 +71,7 @@ var list_c = [
       "You shouldn't be worried because there is nothing dangerous in the water.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 172,
@@ -74,6 +81,7 @@ var list_c = [
     question: "Hitting the iceberg cause the sinking of the ship.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 5,
@@ -83,6 +91,7 @@ var list_c = [
     question: "My body is attractive to everyone",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 147,
@@ -93,6 +102,7 @@ var list_c = [
     question: "A bad speaker is too tired to talk well",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 153,
@@ -102,6 +112,7 @@ var list_c = [
     question: "Marriage usually lasts a lifetime.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 184,
@@ -111,6 +122,7 @@ var list_c = [
     question: "She did not wear a scarf.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 176,
@@ -120,6 +132,7 @@ var list_c = [
     question: "The horse was having a good time.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 103,
@@ -129,6 +142,7 @@ var list_c = [
     question: "The natural law of time does not comply in Philadelphia",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 221,
@@ -138,6 +152,7 @@ var list_c = [
     question: "The girl gave Santa a healthy meal",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 168,
@@ -147,6 +162,7 @@ var list_c = [
     question: "She paid her loans in cash.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 151,
@@ -157,6 +173,7 @@ var list_c = [
     question: "We had saved a lot of money for the car.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 207,
@@ -166,6 +183,7 @@ var list_c = [
     question: "The room is still dark.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 36,
@@ -176,6 +194,7 @@ var list_c = [
     question: "Despite being good at boxing, he loses competitions.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 6,
@@ -186,6 +205,7 @@ var list_c = [
     question: "Mary is running out of naming ideas for her offspring.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 114,
@@ -195,6 +215,7 @@ var list_c = [
     question: "I had a wonderful evening tonight.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 29,
@@ -205,6 +226,7 @@ var list_c = [
     question: "I had breakfast at night.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 177,
@@ -214,6 +236,7 @@ var list_c = [
     question: "Shoulder pads prevent injury.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 34,
@@ -224,6 +247,7 @@ var list_c = [
     question: "My florist gave me a flower recommendation.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 171,
@@ -233,6 +257,7 @@ var list_c = [
     question: "They were chatting.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 3,
@@ -242,6 +267,7 @@ var list_c = [
     question: "I was robbed.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 186,
@@ -251,6 +277,7 @@ var list_c = [
     question: "He was not in a good mood because of a long day.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 192,
@@ -260,6 +287,7 @@ var list_c = [
     question: "He got clean in the shower.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 77,
@@ -270,6 +298,7 @@ var list_c = [
     question: "Learning from your mistakes causes more mistakes",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 94,
@@ -280,6 +309,7 @@ var list_c = [
     question: "I was asleep before the alarm went off",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 4,
@@ -289,6 +319,7 @@ var list_c = [
     question: "My brakes were repaired at the mechanic",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 78,
@@ -299,6 +330,7 @@ var list_c = [
     question: "I am saving money for a difficult time in case it happens.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 44,
@@ -309,6 +341,7 @@ var list_c = [
     question: "You don't get good poker hands when playing stud poker.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 135,
@@ -318,6 +351,7 @@ var list_c = [
     question: "Gunpowder is a very safe material to smoke",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 220,
@@ -327,6 +361,7 @@ var list_c = [
     question: "The firefighter rushed to action after hearing the alarm",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 128,
@@ -338,6 +373,7 @@ var list_c = [
       "People are so nosy they only mind their business after they're dead.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 96,
@@ -347,6 +383,7 @@ var list_c = [
     question: "War makes people dizzy.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 118,
@@ -357,6 +394,7 @@ var list_c = [
     question: "I think that the shampoo is for washing coconuts.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 110,
@@ -366,6 +404,7 @@ var list_c = [
     question: "Autocorrect helps with my defecation.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 219,
@@ -375,6 +414,7 @@ var list_c = [
     question: "Keith got the highest score.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 183,
@@ -384,6 +424,7 @@ var list_c = [
     question: "He mailed a non-stamped letter.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 109,
@@ -394,6 +435,7 @@ var list_c = [
       "I am afraid of widths, not heights (as in dimensions of objects).",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 225,
@@ -403,6 +445,7 @@ var list_c = [
     question: "The shirt was a comfortable size",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 191,
@@ -412,6 +455,7 @@ var list_c = [
     question: "Someone mailed a package.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 130,
@@ -421,6 +465,7 @@ var list_c = [
     question: "The press leaks news about upcoming weddings.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 120,
@@ -431,6 +476,7 @@ var list_c = [
     question: "Marriage is a big gamble.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 193,
@@ -440,6 +486,7 @@ var list_c = [
     question: "Raincoats are unnecessary even in storms.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 58,
@@ -449,6 +496,7 @@ var list_c = [
     question: "The clowns put on an unusual show.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 232,
@@ -458,6 +506,7 @@ var list_c = [
     question: "Most cats have bad eyesight at night.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 9,
@@ -468,6 +517,7 @@ var list_c = [
     question: "People will be able to jump off the platform into the water.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 28,
@@ -477,6 +527,7 @@ var list_c = [
     question: "My aunt tells long and detailed stories.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 115,
@@ -488,6 +539,7 @@ var list_c = [
       "My mom asked me to hand out invitations for my brother's party on my own birthday.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 204,
@@ -497,6 +549,7 @@ var list_c = [
     question: "He did not wash his hands.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 222,
@@ -506,6 +559,7 @@ var list_c = [
     question: "Nighttime is the best time to stargaze",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 15,
@@ -515,6 +569,7 @@ var list_c = [
     question: "She implied that he looked attractive.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 155,
@@ -524,6 +579,7 @@ var list_c = [
     question: "He was born clothed.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 16,
@@ -534,6 +590,7 @@ var list_c = [
     question: "Our son arrived to school on time.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 125,
@@ -543,6 +600,7 @@ var list_c = [
     question: "Taxes are really annoying.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 205,
@@ -552,6 +610,7 @@ var list_c = [
     question: "No one probably heard Kim's phone.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 46,
@@ -562,6 +621,7 @@ var list_c = [
     question: "When you write an autobiography, you write it about yourself.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 37,
@@ -572,6 +632,7 @@ var list_c = [
     question: "Working in a group of 3 and with 2 workers is efficient.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 71,
@@ -581,6 +642,7 @@ var list_c = [
     question: "You can read a child's emotions by looking at their expression",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 88,
@@ -590,6 +652,7 @@ var list_c = [
     question: "The person is recommending that you invest in the stock market",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 162,
@@ -599,6 +662,7 @@ var list_c = [
     question: "She wants bread.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 160,
@@ -608,6 +672,7 @@ var list_c = [
     question: "Small boys don't overspend.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 82,
@@ -617,6 +682,7 @@ var list_c = [
     question: "Restaurant sells cheap gasoline.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 197,
@@ -626,6 +692,7 @@ var list_c = [
     question: "The genie had magic powers.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 208,
@@ -635,6 +702,7 @@ var list_c = [
     question: "The kitten did not play with yarn.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 100,
@@ -645,6 +713,7 @@ var list_c = [
       'Your husband thinks that he "fixed" something, but in reality it still needs to be repaired.',
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 182,
@@ -654,6 +723,7 @@ var list_c = [
     question: "They meet each other without doing anything.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 156,
@@ -663,6 +733,7 @@ var list_c = [
     question: "The couple is not in the circus.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 178,
@@ -672,6 +743,7 @@ var list_c = [
     question: "Ted only needs a hammer to hang the picture.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 131,
@@ -682,6 +754,7 @@ var list_c = [
     question: "John and the dog get along.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 173,
@@ -691,6 +764,7 @@ var list_c = [
     question: "Her intention was to perm her hair.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 84,
@@ -701,6 +775,7 @@ var list_c = [
     question: "I knew the dog was good at bowling.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 226,
@@ -710,6 +785,7 @@ var list_c = [
     question: "Nests only provide a temporary home for young birds",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 8,
@@ -720,6 +796,7 @@ var list_c = [
     question: "My doctor has violated his oath to practice medicine",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 185,
@@ -729,6 +806,7 @@ var list_c = [
     question: "The cheap pen has a lot of ink.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 166,
@@ -738,6 +816,7 @@ var list_c = [
     question: "Dan was retired as coach of the team.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 117,
@@ -747,6 +826,7 @@ var list_c = [
     question: "Plagiarism is a new word that I made.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 233,
@@ -757,6 +837,7 @@ var list_c = [
     question: "Lights help to drive more carefully at night.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 11,
@@ -766,6 +847,7 @@ var list_c = [
     question: "There are other substances known to be faster than radiation.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 210,
@@ -775,6 +857,7 @@ var list_c = [
     question: "Brushing your teeth after every meal is good for you.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 108,
@@ -784,6 +867,7 @@ var list_c = [
     question: "I dislike drug users.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 48,
@@ -793,6 +877,7 @@ var list_c = [
     question: "People love liars",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 25,
@@ -804,6 +889,7 @@ var list_c = [
       "Patients should be feeling better before they leave the hospital.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 53,
@@ -814,6 +900,7 @@ var list_c = [
     question: "The U.S imports tobacco.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 43,
@@ -824,6 +911,7 @@ var list_c = [
       "Some people only listen to the radio rather than any other type of cultural media.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 10,
@@ -833,6 +921,7 @@ var list_c = [
     question: "Sunday is a day of work like any other.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 215,
@@ -842,6 +931,7 @@ var list_c = [
     question: "It is possible to fly a kite in this wheather.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 67,
@@ -851,6 +941,7 @@ var list_c = [
     question: "She inherited her good looks genetically from her father.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 150,
@@ -861,6 +952,7 @@ var list_c = [
     question: "College is cheap.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 141,
@@ -872,6 +964,7 @@ var list_c = [
       "It is nicer to hear someone else's opinion than to say your own.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 224,
@@ -881,6 +974,7 @@ var list_c = [
     question: "The man did not hold onto his paycheck",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 169,
@@ -890,6 +984,7 @@ var list_c = [
     question: "She knew what time it is.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 14,
@@ -900,6 +995,7 @@ var list_c = [
     question: "I saved up income to use when I need.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 80,
@@ -910,6 +1006,7 @@ var list_c = [
     question: "Someone is drawing a picture of a chameleon.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 121,
@@ -919,6 +1016,7 @@ var list_c = [
     question: "We have a happy marriage.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 87,
@@ -930,6 +1028,7 @@ var list_c = [
       "The Hollywood couple is getting married immediately after divorce.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 18,
@@ -939,6 +1038,7 @@ var list_c = [
     question: "Generosity can be bought with money.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 61,
@@ -950,6 +1050,7 @@ var list_c = [
       "I can tell whether or not my wife is telling the truth by looking at her.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 167,
@@ -959,6 +1060,7 @@ var list_c = [
     question: "They left a big tip after paying for their meals.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 2,
@@ -968,6 +1070,7 @@ var list_c = [
     question: "It is hard to pay expenses.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 70,
@@ -978,6 +1081,7 @@ var list_c = [
     question: "Reverse crunches are good for the abs.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 91,
@@ -988,6 +1092,7 @@ var list_c = [
     question: "I took the neighbor's fence.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 66,
@@ -997,6 +1102,7 @@ var list_c = [
     question: "You have the same views as someone else",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 137,
@@ -1006,6 +1112,7 @@ var list_c = [
     question: "Pencillin is an appropriate gift to rich people.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 238,
@@ -1015,6 +1122,7 @@ var list_c = [
     question: "The cold made him put on a heavy jacket.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 55,
@@ -1026,6 +1134,7 @@ var list_c = [
       "Spouses are even more supportive during difficult times than friends.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 223,
@@ -1035,6 +1144,7 @@ var list_c = [
     question: "People were leaving their dirty dishes in the living room",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 86,
@@ -1046,6 +1156,7 @@ var list_c = [
       "Arguments can prevent couples who aren't compatible from getting married.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 111,
@@ -1056,6 +1167,7 @@ var list_c = [
     question: "There is toilet paper in the office bathrooms.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 200,
@@ -1065,6 +1177,7 @@ var list_c = [
     question: "The problem is on the board.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 181,
@@ -1074,6 +1187,7 @@ var list_c = [
     question: "Water and sunshine is helpful for plants.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 105,
@@ -1083,6 +1197,7 @@ var list_c = [
     question: "You should remember something tomorrow",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 133,
@@ -1093,6 +1208,7 @@ var list_c = [
     question: "The fundraiser is solving a problem that it creates",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 97,
@@ -1103,6 +1219,7 @@ var list_c = [
     question: "The grandfather fell asleep while driving a bus .",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 146,
@@ -1113,6 +1230,7 @@ var list_c = [
       'Patriotic politicans don\'t care about getting their "slice" of the pie that is America.',
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 23,
@@ -1123,6 +1241,7 @@ var list_c = [
     question: "The prisoner confessed.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 113,
@@ -1133,6 +1252,7 @@ var list_c = [
     question: "Participants answered only some of the survey questions.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 129,
@@ -1142,6 +1262,7 @@ var list_c = [
     question: "It's hard to get kids out of bed.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 76,
@@ -1151,6 +1272,7 @@ var list_c = [
     question: "My friends like the fact that I am an only child",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 56,
@@ -1160,6 +1282,7 @@ var list_c = [
     question: "Turning around gives you money.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 20,
@@ -1170,6 +1293,7 @@ var list_c = [
     question: "Vienna is the most loved capital city.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 104,
@@ -1179,6 +1303,7 @@ var list_c = [
     question: "The speaker is warning you about missles",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 127,
@@ -1188,6 +1313,7 @@ var list_c = [
     question: "Teenagers always read their textbooks.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 218,
@@ -1197,6 +1323,7 @@ var list_c = [
     question: "There were candles on the cake.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 202,
@@ -1206,6 +1333,7 @@ var list_c = [
     question: "Her job was easy.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 126,
@@ -1216,6 +1344,7 @@ var list_c = [
     question: "The garage sale was selling various family members.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 164,
@@ -1225,6 +1354,7 @@ var list_c = [
     question: "The dentist recommends teeth brushing.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 90,
@@ -1234,6 +1364,7 @@ var list_c = [
     question: "I am dying my hair brown.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 158,
@@ -1244,6 +1375,7 @@ var list_c = [
     question: "The lawyer was cheap.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 41,
@@ -1253,6 +1385,7 @@ var list_c = [
     question: "My coat is waterproof.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 98,
@@ -1263,6 +1396,7 @@ var list_c = [
     question: "Research is really just using a bunch of other people's ideas.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 40,
@@ -1273,6 +1407,7 @@ var list_c = [
     question: "Guidebooks are helpful when visiting other places.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 189,
@@ -1282,6 +1417,7 @@ var list_c = [
     question: "She does not know that Jeff plans to call.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 22,
@@ -1292,6 +1428,7 @@ var list_c = [
     question: "We have enough money to pay for the soup.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 157,
@@ -1301,6 +1438,7 @@ var list_c = [
     question: "The computer is relaxed.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 74,
@@ -1311,6 +1449,7 @@ var list_c = [
     question: "People change opinions on advertisement.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 206,
@@ -1320,6 +1459,7 @@ var list_c = [
     question: "Jo's favorite season is summer.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 54,
@@ -1329,6 +1469,7 @@ var list_c = [
     question: "A dog looks only slightly different from a fox.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 89,
@@ -1339,6 +1480,7 @@ var list_c = [
       "If you don't wear clothes while cleaning windows it would be considered streaking.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 240,
@@ -1348,6 +1490,7 @@ var list_c = [
     question: "She was looking to change her hair.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 50,
@@ -1357,6 +1500,7 @@ var list_c = [
     question: "The house can be improved beyond the base package",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 194,
@@ -1366,6 +1510,7 @@ var list_c = [
     question: "The project was submitted late.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 170,
@@ -1375,6 +1520,7 @@ var list_c = [
     question: "Sherry can hear.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 195,
@@ -1384,6 +1530,7 @@ var list_c = [
     question: "She wanted to keep her grades secret.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 213,
@@ -1393,6 +1540,7 @@ var list_c = [
     question: "The room was quite.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 159,
@@ -1402,6 +1550,7 @@ var list_c = [
     question: "Owning an ice cream business is not stres-inducing",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 79,
@@ -1411,6 +1560,7 @@ var list_c = [
     question: "I will be irritated if I can't use Facebook soon.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 180,
@@ -1420,6 +1570,7 @@ var list_c = [
     question: "Dad did not cut the turkey.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 122,
@@ -1429,6 +1580,7 @@ var list_c = [
     question: "Solution here means the answer to a problem.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 47,
@@ -1438,6 +1590,7 @@ var list_c = [
     question: "Even detours must be a way to get somehwere.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 107,
@@ -1448,6 +1601,7 @@ var list_c = [
     question: "I should use noodles that are at least 1 foot long",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 198,
@@ -1457,6 +1611,7 @@ var list_c = [
     question: "Bill's mother is alive.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 217,
@@ -1466,6 +1621,7 @@ var list_c = [
     question: "Channel 13 is Disney Channel.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 101,
@@ -1475,6 +1631,7 @@ var list_c = [
     question: "A bad banker cannot focus on one thing.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 57,
@@ -1484,6 +1641,7 @@ var list_c = [
     question: "Strength is a heritable trait.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 134,
@@ -1494,6 +1652,7 @@ var list_c = [
     question: "The elephant is asking you to pay.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 102,
@@ -1503,6 +1662,7 @@ var list_c = [
     question: "Bankers will lends you things that you need.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 163,
@@ -1512,6 +1672,7 @@ var list_c = [
     question: "Bob proposed to her.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 136,
@@ -1521,6 +1682,7 @@ var list_c = [
     question: "The election process is not corrupt.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 27,
@@ -1531,6 +1693,7 @@ var list_c = [
     question: "Refrigerating milk is important.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 161,
@@ -1540,6 +1703,7 @@ var list_c = [
     question: "She was angry.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 32,
@@ -1549,6 +1713,7 @@ var list_c = [
     question: "Science has advanced rapidly.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 59,
@@ -1559,6 +1724,7 @@ var list_c = [
     question: "The candidates are not politicians yet.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 152,
@@ -1568,6 +1734,7 @@ var list_c = [
     question: "I enjoy meals without meat.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 60,
@@ -1578,6 +1745,7 @@ var list_c = [
     question: "She quit smoking.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 196,
@@ -1587,6 +1755,7 @@ var list_c = [
     question: "Tom did not buy his date a present",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 52,
@@ -1596,6 +1765,7 @@ var list_c = [
     question: "Garbage is being turned into gasoline.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 209,
@@ -1605,6 +1775,7 @@ var list_c = [
     question: "The farmer spent the morning watching TV.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 190,
@@ -1614,6 +1785,7 @@ var list_c = [
     question: "She did not close the car door.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 203,
@@ -1623,6 +1795,7 @@ var list_c = [
     question: "You should not leave the light on at night.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 75,
@@ -1632,6 +1805,7 @@ var list_c = [
     question: "I am worried about you because you don't seem like yourself.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 139,
@@ -1642,6 +1816,7 @@ var list_c = [
     question: "A library in Chicago has 200 floors.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 45,
@@ -1651,6 +1826,7 @@ var list_c = [
     question: "Golf is easy.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 132,
@@ -1661,6 +1837,7 @@ var list_c = [
     question: "Soldiers get their clothing for free",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 154,
@@ -1671,6 +1848,7 @@ var list_c = [
     question: "We split the house fairly.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 216,
@@ -1680,6 +1858,7 @@ var list_c = [
     question: "Ellen hates being creative.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 92,
@@ -1689,6 +1868,7 @@ var list_c = [
     question: "I shot a turkey in the bowling alley",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 13,
@@ -1698,6 +1878,7 @@ var list_c = [
     question: "A committee uses votes to function.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 227,
@@ -1707,6 +1888,7 @@ var list_c = [
     question: "I prefer being cold over being hot",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 7,
@@ -1716,6 +1898,7 @@ var list_c = [
     question: "A candle helps you see furniture in the dark.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 93,
@@ -1725,6 +1908,7 @@ var list_c = [
     question: "The pen can write the word 'underwater'.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 39,
@@ -1734,6 +1918,7 @@ var list_c = [
     question: "The suburb isn't far from the town.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 188,
@@ -1743,6 +1928,7 @@ var list_c = [
     question: "The athlete liked weight training.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 112,
@@ -1753,6 +1939,7 @@ var list_c = [
     question: "I believe that the deer has a job.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 175,
@@ -1762,6 +1949,7 @@ var list_c = [
     question: "Joe was obsessed with his outfit.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 95,
@@ -1771,6 +1959,7 @@ var list_c = [
     question: "The Democratic party is organized.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 85,
@@ -1780,6 +1969,7 @@ var list_c = [
     question: "I have never slept for 10 days in a row.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 65,
@@ -1789,6 +1979,7 @@ var list_c = [
     question: "Most people think I am a bad actor before they meet me",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 143,
@@ -1800,6 +1991,7 @@ var list_c = [
       "The couple was practicing swimming in the water before the lifeguard moved them.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 83,
@@ -1810,6 +2002,7 @@ var list_c = [
     question: "The Scottish military wears kilts but are in need of pants",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 138,
@@ -1820,6 +2013,7 @@ var list_c = [
       "You should save the whales for later by starting a whale collection.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 72,
@@ -1829,6 +2023,7 @@ var list_c = [
     question: "Money is the source of many of the world's problems.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 235,
@@ -1839,6 +2034,7 @@ var list_c = [
       "A family tree was not helpful in learning about their ancestory.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 33,
@@ -1848,6 +2044,7 @@ var list_c = [
     question: "Napping has no benefits to aging.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 26,
@@ -1858,6 +2055,7 @@ var list_c = [
     question: "The patient was on a bed rest.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 211,
@@ -1867,6 +2065,7 @@ var list_c = [
     question: "He went fishing at the lake.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 49,
@@ -1876,6 +2075,7 @@ var list_c = [
     question: "Numbers can actually be misleading.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 1,
@@ -1886,6 +2086,7 @@ var list_c = [
     question: "I am good at doing taxes",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 12,
@@ -1896,6 +2097,7 @@ var list_c = [
     question: "His company pays him in quarters.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 106,
@@ -1905,6 +2107,7 @@ var list_c = [
     question: "The person likes other people to know his thoughts",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 21,
@@ -1915,6 +2118,7 @@ var list_c = [
     question: "Courtship is important in forming relationships.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 35,
@@ -1924,6 +2128,7 @@ var list_c = [
     question: "Vacations are short.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 187,
@@ -1933,6 +2138,7 @@ var list_c = [
     question: "She was the top student.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 229,
@@ -1942,6 +2148,7 @@ var list_c = [
     question: "The woman maintained the same opinion",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 165,
@@ -1951,6 +2158,7 @@ var list_c = [
     question: "He had a tie on.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 140,
@@ -1962,6 +2170,7 @@ var list_c = [
       "You will be able to read the most important notes that you took for test.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 237,
@@ -1972,6 +2181,7 @@ var list_c = [
       "The band was her way to follow her passion for playing the guitar.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 62,
@@ -1983,6 +2193,7 @@ var list_c = [
       "The frequency of people getting run over by cars is a problem for public health.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 30,
@@ -1993,6 +2204,7 @@ var list_c = [
     question: "She wants her daughters to settle down.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 236,
@@ -2002,6 +2214,7 @@ var list_c = [
     question: "The waitress was not tipped enough.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 19,
@@ -2011,6 +2224,7 @@ var list_c = [
     question: "She can tell that something is not going well with him.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 179,
@@ -2020,6 +2234,7 @@ var list_c = [
     question: "Ann took her anger out on the door.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 42,
@@ -2030,6 +2245,7 @@ var list_c = [
       "The art museum just recieved a piece of art that Rembrandt made early in his career with charcoal.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 148,
@@ -2039,6 +2255,7 @@ var list_c = [
     question: "The man snapped in half",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 144,
@@ -2049,6 +2266,7 @@ var list_c = [
     question: "The owner is very generous.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 73,
@@ -2059,6 +2277,7 @@ var list_c = [
     question: "Politicians are offensive.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 228,
@@ -2068,6 +2287,7 @@ var list_c = [
     question: "He is very confident about this horse winning the race",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 17,
@@ -2077,6 +2297,7 @@ var list_c = [
     question: "There is plenty of hydrogen and nitrogen where I am from.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 31,
@@ -2086,6 +2307,7 @@ var list_c = [
     question: "Many people are greedy.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 230,
@@ -2095,6 +2317,7 @@ var list_c = [
     question: "Hard works is the key to success.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 68,
@@ -2104,6 +2327,7 @@ var list_c = [
     question: "Throwing out all of the bad food was an easy task",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 6,
   },
   {
     id_2: 212,
@@ -2113,6 +2337,7 @@ var list_c = [
     question: "It was hot in the room.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 214,
@@ -2122,6 +2347,7 @@ var list_c = [
     question: "Bill had his teeth checked.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 142,
@@ -2131,6 +2357,7 @@ var list_c = [
     question: "Bookkeepers are bad at math.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 123,
@@ -2140,6 +2367,7 @@ var list_c = [
     question: "Drinking a lot of alcohol is cheap.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 231,
@@ -2149,6 +2377,7 @@ var list_c = [
     question: "The first space is for one to enter one's name.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 69,
@@ -2158,6 +2387,7 @@ var list_c = [
     question: "Building staircases is hard.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 99,
@@ -2167,6 +2397,7 @@ var list_c = [
     question: "When you get older, you will be immune to bad information",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 239,
@@ -2176,6 +2407,7 @@ var list_c = [
     question: "She was able to swim.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 116,
@@ -2185,6 +2417,7 @@ var list_c = [
     question: "You should donate all of your blood.",
     correct_response: "n",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 201,
@@ -2194,6 +2427,7 @@ var list_c = [
     question: "The door is locked at night.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 1,
   },
   {
     id_2: 63,
@@ -2204,6 +2438,7 @@ var list_c = [
     question: "The son is not a creative musician.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 3,
   },
   {
     id_2: 174,
@@ -2213,6 +2448,7 @@ var list_c = [
     question: "Erika's eyes hurt if she doesn't wear sunglasses.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 4,
   },
   {
     id_2: 119,
@@ -2222,6 +2458,7 @@ var list_c = [
     question: "I bought a record player.",
     correct_response: "y",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 124,
@@ -2232,6 +2469,7 @@ var list_c = [
     question: "The editor only began his career once he was an adult.",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 5,
   },
   {
     id_2: 145,
@@ -2242,6 +2480,7 @@ var list_c = [
     question: "The primaries increase the number of candidates.",
     correct_response: "n",
     left_or_right: "left",
+    trigger_value: 2,
   },
   {
     id_2: 64,
@@ -2252,5 +2491,6 @@ var list_c = [
     question: "I drink after my children leave the house",
     correct_response: "y",
     left_or_right: "right",
+    trigger_value: 6,
   },
 ];
