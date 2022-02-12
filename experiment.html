@@ -9,8 +9,12 @@
     <script src="jspsych/plugin-preload.js"></script>
     <script src="jspsych/plugin-survey-text.js"></script>
 
-    <script src="trial11.js"></script>
-    <script src="practice.js"></script>
+    <script src="stimuli/list_a.js"></script>
+    <script src="stimuli/list_b.js"></script>
+    <script src="stimuli/list_c.js"></script>
+    <script src="stimuli/list_d.js"></script>
+
+    <script src="stimuli/practice.js"></script>
 
     <!-- stylesheet from the library-->
     <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
@@ -32,6 +36,8 @@
 <style></style>
 
 <script>
+    var test_stimuli = [list_a, list_b, list_c, list_d]
+
     var jsPsych = initJsPsych({});
 
     var urlvar = jsPsych.data.urlVariables();
