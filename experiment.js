@@ -60,7 +60,7 @@ var practice_fixation = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: "+",
   choices: "NO_KEYS",
-  trial_duration: 2000,
+  trial_duration: 500,
   on_finish: function () {
     practice_sentence = jsPsych.timelineVariable("sentence");
     practice_words = practice_sentence.split(" ");
@@ -126,7 +126,7 @@ var practice_final_word = {
   },
 
   choices: "NO_KEYS",
-  trial_duration: 1000,
+  trial_duration: 200,
   post_trial_gap: 2500,
   css_classes: ["big-font"],
 };
@@ -143,14 +143,13 @@ var practice_question = {
   stimulus: jsPsych.timelineVariable("question"),
   choices: ["y", "n"],
   data: {
-    task: "response",
+    task: "practice-response",
     correct_response: jsPsych.timelineVariable("correct_response"),
   },
-  //trial_duration: 4000,
   on_finish: function (data) {
     data.correct = data.response == data.correct_response;
   },
-  post_trial_gap: 2000,
+  post_trial_gap: 1000,
 };
 
 var intermission = {
@@ -214,7 +213,7 @@ var fixation = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: "+",
   choices: "NO_KEYS",
-  trial_duration: 2000,
+  trial_duration: 500,
   on_finish: function () {
     joke = jsPsych.timelineVariable("sentence");
     joke_words = joke.split(" ");
@@ -284,7 +283,7 @@ var test = {
   },
 
   choices: "NO_KEYS",
-  trial_duration: 1000,
+  trial_duration: 200,
   post_trial_gap: 2500,
   css_classes: ["big-font"],
 };
@@ -301,7 +300,7 @@ var question = {
   stimulus: jsPsych.timelineVariable("question"),
   choices: ["y", "n"],
   data: {
-    task: "response",
+    task: "test-response",
     id: jsPsych.timelineVariable("id_2"),
     sentence: jsPsych.timelineVariable("sentence"),
     word: jsPsych.timelineVariable("word"),
@@ -310,11 +309,10 @@ var question = {
     question: jsPsych.timelineVariable("question"),
     correct_response: jsPsych.timelineVariable("correct_response"),
   },
-  //trial_duration: 4000,
   on_finish: function (data) {
     data.correct = data.response == data.correct_response;
   },
-  post_trial_gap: 2000,
+  post_trial_gap: 1000,
 };
 
 var test_block_1 = {
@@ -354,7 +352,8 @@ var break_block = {
     stimulus: `<p>You have finished a set of 60 sentences.</p>
         <p>Please let the experimenter know when you are ready to continue.</p>
         <p>Then press the spacebar to begin the next set.</p>`,
-    choices: [' ']
+    choices: [' '],
+    post_trial_gap: 2000,
 }
 
 timeline.push(test_block_1);
