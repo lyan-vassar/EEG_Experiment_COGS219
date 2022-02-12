@@ -1,3 +1,6 @@
+var N_PRACTICE_QUESTIONS = 2;
+var N_QUESTIONS_PER_BLOCK = 2;
+
 var test_stimuli = [list_a, list_b, list_c, list_d];
 
 var jsPsych = initJsPsych({});
@@ -104,7 +107,7 @@ var practice_final_word = {
   },
   type: jsPsychHtmlKeyboardResponse,
   stimulus: function () {
-    if (jsPsych.timelineVariable("Left_or_Right") == "left") {
+    if (jsPsych.timelineVariable("left_or_right") == "left") {
       var ending = `<div style="position:relative; width:800px; height:60px; line-height:60px;">
             <p style="position:absolute; width:800px; text-align:center; margin:0;">+</p>
             <p style="position:absolute; right:calc(50% + 89px); margin:0;">${jsPsych.timelineVariable(
@@ -137,7 +140,7 @@ var question_mark = {
 
 var practice_question = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: jsPsych.timelineVariable("Question"),
+  stimulus: jsPsych.timelineVariable("question"),
   choices: ["y", "n"],
   data: {
     task: "response",
@@ -173,7 +176,7 @@ var practice_sentences_timeline = {
     question_mark,
     practice_question,
   ],
-  timeline_variables: practice_questions,
+  timeline_variables: practice_questions.slice(0, N_PRACTICE_QUESTIONS),
 };
 
 var practice_procedure = {
@@ -201,7 +204,6 @@ var beginning_exp = {
 
 timeline.push(beginning_exp);
 
-// STARTING EXPERIMENT
 //initialize the joke sentence and the words
 var joke = "";
 var joke_words = [];
@@ -214,7 +216,7 @@ var fixation = {
   choices: "NO_KEYS",
   trial_duration: 2000,
   on_finish: function () {
-    joke = jsPsych.timelineVariable("Sentence");
+    joke = jsPsych.timelineVariable("sentence");
     joke_words = joke.split(" ");
   },
   css_classes: ["big-font"],
@@ -260,23 +262,21 @@ var test = {
 
   type: jsPsychHtmlKeyboardResponse,
   stimulus: function () {
-    var left_right_choice = jsPsych.timelineVariable("left_or_right");
-
     var leftEnding = `<div style="position:relative; width:800px; height:60px; line-height:60px">
             <p style="position:absolute; width:800px; text-align:center; margin:0;">+</p>
             <p style="position:absolute; left: calc(50% + 89px); margin:0;">${jsPsych.timelineVariable(
-              "Ending"
+              "word"
             )}</p>
             </div>`;
 
     var rightEnding = `<div style="position:relative; width:800px; height:60px; line-height:60px;">
             <p style="position:absolute; width:800px; text-align:center; margin:0;">+</p>
             <p style="position:absolute; right:calc(50% + 89px); margin:0;">${jsPsych.timelineVariable(
-              "Ending"
+              "word"
             )}</p>
             </div>`;
 
-    if ((left_or_right_choice = "left")) {
+    if (jsPsych.timelineVariable("left_or_right") == "left") {
       return leftEnding;
     } else {
       return rightEnding;
@@ -298,17 +298,17 @@ var question_mark = {
 
 var question = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: jsPsych.timelineVariable("Question"),
+  stimulus: jsPsych.timelineVariable("question"),
   choices: ["y", "n"],
   data: {
     task: "response",
-    id: jsPsych.timelineVariable("Id"),
-    sentence: jsPsych.timelineVariable("Sentence"),
-    ending: jsPsych.timelineVariable("Ending"),
-    left_or_right: jsPsych.timelineVariable("Left_or_Right"),
-    sentence_type: jsPsych.timelineVariable("Sentence_Type"),
-    question: jsPsych.timelineVariable("Question"),
-    correct_response: jsPsych.timelineVariable("Correct_Response"),
+    id: jsPsych.timelineVariable("id_2"),
+    sentence: jsPsych.timelineVariable("sentence"),
+    word: jsPsych.timelineVariable("word"),
+    left_or_right: jsPsych.timelineVariable("left_or_right"),
+    sentence_type: jsPsych.timelineVariable("sentence_type"),
+    question: jsPsych.timelineVariable("question"),
+    correct_response: jsPsych.timelineVariable("correct_response"),
   },
   //trial_duration: 4000,
   on_finish: function (data) {
@@ -317,22 +317,60 @@ var question = {
   post_trial_gap: 2000,
 };
 
-var test_procedure = {
+var test_block_1 = {
   timeline: [fixation, joke_loop, test, question_mark, question],
-  timeline_variables: test_stimuli[selectedNumber],
+  timeline_variables: test_stimuli[selectedNumber].slice(
+    0,
+    N_QUESTIONS_PER_BLOCK
+  ),
 };
-timeline.push(test_procedure);
+
+var test_block_2 = {
+  timeline: [fixation, joke_loop, test, question_mark, question],
+  timeline_variables: test_stimuli[selectedNumber].slice(
+    N_QUESTIONS_PER_BLOCK,
+    N_QUESTIONS_PER_BLOCK*2
+  ),
+};
+
+var test_block_3 = {
+  timeline: [fixation, joke_loop, test, question_mark, question],
+  timeline_variables: test_stimuli[selectedNumber].slice(
+    N_QUESTIONS_PER_BLOCK*2,
+    N_QUESTIONS_PER_BLOCK*3
+  ),
+};
+
+var test_block_4 = {
+  timeline: [fixation, joke_loop, test, question_mark, question],
+  timeline_variables: test_stimuli[selectedNumber].slice(
+    N_QUESTIONS_PER_BLOCK*3,
+    N_QUESTIONS_PER_BLOCK*4
+  ),
+};
+
+var break_block = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `<p>You have finished a set of 60 sentences.</p>
+        <p>Please let the experimenter know when you are ready to continue.</p>
+        <p>Then press the spacebar to begin the next set.</p>`,
+    choices: [' ']
+}
+
+timeline.push(test_block_1);
+timeline.push(break_block);
+timeline.push(test_block_2);
+timeline.push(break_block);
+timeline.push(test_block_3);
+timeline.push(break_block);
+timeline.push(test_block_4);
 
 var debrief_block = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: function () {
-    var trials = jsPsych.data.get().filter({ task: "response" });
-    var correct_trials = trials.filter({ correct: true });
-    var accuracy = Math.round((correct_trials.count() / trials.count()) * 100);
-    //var rt = Math.round(correct_trials.select("rt").mean());
-
-    return `<p>You responded correctly on ${accuracy}% of the trials.</p> <p>Press any key to complete the experiment. Thank you!</p>`;
-  },
+  stimulus: `<p>You have completed the experiment. Thank you!</p>
+    <p>The experimenter will help you remove the cap and explain the purpose of the experiment.</p>
+    <p>Experimenter: Press the spacebar to exit fullscreen mode after helping the participant leave.</p>`,
+    choices: [' ']
 };
 
 timeline.push(debrief_block);

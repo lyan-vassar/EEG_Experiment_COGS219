@@ -1,4 +1,4 @@
-[
+var practice_questions = [
   {
     "id_2": "p1",
     "sentence": "The children ran outside to",
@@ -11,7 +11,7 @@
   },
   {
     "id_2": "p2",
-    "sentence": "On Valentine’s Day the woman received a single red",
+    "sentence": "On Valentine's Day the woman received a single red",
     "word": "rose",
     "sentence_type": "practice",
     "question": "The woman got a lot of gifts on Valentine's Day.",
@@ -31,7 +31,7 @@
   },
   {
     "id_2": "p4",
-    "sentence": "The Parkers’ baby could already say three",
+    "sentence": "The Parkers' baby could already say three",
     "word": "words",
     "sentence_type": "practice",
     "question": "The Parker's baby can say some words.",
