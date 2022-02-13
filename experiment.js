@@ -41,7 +41,7 @@ timeline.push(enter_fullscreen);
 // welcome message
 var welcome = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: "Welcome to our EEG Experiment. Press any key to begin.",
+  stimulus: "<p>Experimenter will read instructions for the experiment. After instructions are complete, press any key to begin.</p>",
   on_start: function () {
     document.querySelector("html").classList.add("hide-cursor");
   },
@@ -54,7 +54,7 @@ timeline.push(welcome);
 var practice_instructions = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus:
-    "We will now begin the practice portion of the experiment. Press any key to begin.",
+    "The practice portion will begin on the next screen. Press any key to begin.",
 };
 
 var practice_sentence = "";
@@ -176,7 +176,7 @@ var practice_question = {
 
 var intermission = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: "Please wait for the researcher to enter the room.",
+  stimulus: "The practice portion is complete. Experimenters will check to see if you are ready to proceed. Press any key to continue.",
 };
 
 var ask_to_repeat = {
@@ -220,7 +220,7 @@ timeline.push(practice_procedure);
 
 var beginning_exp = {
   type: jsPsychHtmlKeyboardResponse,
-  stimulus: "We will now begin the experiment. Press any key to begin.",
+  stimulus: "The first set of 60 sentences will begin on the next screen. Press any key to begin.",
 };
 
 timeline.push(beginning_exp);
