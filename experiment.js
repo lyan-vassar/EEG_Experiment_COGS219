@@ -14,12 +14,15 @@ var selectedNumber = urlvar.list;
 //screen in chronological order
 var timeline = []; //it is a variable and it is initialized as an empty list
 
+var subject_id;
+
 // researcher input
 var researchInput = {
   type: jsPsychSurveyText,
   preamble: "Please enter the participant ID as a two digit number, e.g., 01",
   questions: [{ prompt: "Participant ID: ", required: true }],
   on_finish: function (data) {
+    subject_id = data.response.Q0;
     jsPsych.data.addProperties({
       subject_id: data.response.Q0,
     });
@@ -39,6 +42,9 @@ timeline.push(enter_fullscreen);
 var welcome = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: "Welcome to our EEG Experiment. Press any key to begin.",
+  on_start: function () {
+    document.querySelector("html").classList.add("hide-cursor");
+  },
 };
 
 timeline.push(welcome);
@@ -129,6 +135,15 @@ var practice_final_word = {
   trial_duration: 200,
   post_trial_gap: 2500,
   css_classes: ["big-font"],
+  data: {
+    task: 'practice-word-trigger',
+    id_2: jsPsych.timelineVariable("id_2"),
+    sentence: jsPsych.timelineVariable("sentence"),
+    word: jsPsych.timelineVariable("word"),
+    left_or_right: jsPsych.timelineVariable("left_or_right"),
+    sentence_type: jsPsych.timelineVariable("sentence_type"),
+    trigger_value: jsPsych.timelineVariable("trigger_value"),
+  }
 };
 
 var question_mark = {
@@ -144,7 +159,14 @@ var practice_question = {
   choices: ["y", "n"],
   data: {
     task: "practice-response",
+    id_2: jsPsych.timelineVariable("id_2"),
+    sentence: jsPsych.timelineVariable("sentence"),
+    word: jsPsych.timelineVariable("word"),
+    left_or_right: jsPsych.timelineVariable("left_or_right"),
+    sentence_type: jsPsych.timelineVariable("sentence_type"),
+    question: jsPsych.timelineVariable("question"),
     correct_response: jsPsych.timelineVariable("correct_response"),
+    trigger_value: jsPsych.timelineVariable("trigger_value"),
   },
   on_finish: function (data) {
     data.correct = data.response == data.correct_response;
@@ -286,6 +308,15 @@ var test = {
   trial_duration: 200,
   post_trial_gap: 2500,
   css_classes: ["big-font"],
+  data: {
+    task: 'test-word-trigger',
+    id_2: jsPsych.timelineVariable("id_2"),
+    sentence: jsPsych.timelineVariable("sentence"),
+    word: jsPsych.timelineVariable("word"),
+    left_or_right: jsPsych.timelineVariable("left_or_right"),
+    sentence_type: jsPsych.timelineVariable("sentence_type"),
+    trigger_value: jsPsych.timelineVariable("trigger_value"),
+  }
 };
 
 var question_mark = {
@@ -301,13 +332,14 @@ var question = {
   choices: ["y", "n"],
   data: {
     task: "test-response",
-    id: jsPsych.timelineVariable("id_2"),
+    id_2: jsPsych.timelineVariable("id_2"),
     sentence: jsPsych.timelineVariable("sentence"),
     word: jsPsych.timelineVariable("word"),
     left_or_right: jsPsych.timelineVariable("left_or_right"),
     sentence_type: jsPsych.timelineVariable("sentence_type"),
     question: jsPsych.timelineVariable("question"),
     correct_response: jsPsych.timelineVariable("correct_response"),
+    trigger_value: jsPsych.timelineVariable("trigger_value"),
   },
   on_finish: function (data) {
     data.correct = data.response == data.correct_response;
@@ -327,34 +359,34 @@ var test_block_2 = {
   timeline: [fixation, joke_loop, test, question_mark, question],
   timeline_variables: test_stimuli[selectedNumber].slice(
     N_QUESTIONS_PER_BLOCK,
-    N_QUESTIONS_PER_BLOCK*2
+    N_QUESTIONS_PER_BLOCK * 2
   ),
 };
 
 var test_block_3 = {
   timeline: [fixation, joke_loop, test, question_mark, question],
   timeline_variables: test_stimuli[selectedNumber].slice(
-    N_QUESTIONS_PER_BLOCK*2,
-    N_QUESTIONS_PER_BLOCK*3
+    N_QUESTIONS_PER_BLOCK * 2,
+    N_QUESTIONS_PER_BLOCK * 3
   ),
 };
 
 var test_block_4 = {
   timeline: [fixation, joke_loop, test, question_mark, question],
   timeline_variables: test_stimuli[selectedNumber].slice(
-    N_QUESTIONS_PER_BLOCK*3,
-    N_QUESTIONS_PER_BLOCK*4
+    N_QUESTIONS_PER_BLOCK * 3,
+    N_QUESTIONS_PER_BLOCK * 4
   ),
 };
 
 var break_block = {
-    type: jsPsychHtmlKeyboardResponse,
-    stimulus: `<p>You have finished a set of 60 sentences.</p>
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: `<p>You have finished a set of 60 sentences.</p>
         <p>Please let the experimenter know when you are ready to continue.</p>
         <p>Then press the spacebar to begin the next set.</p>`,
-    choices: [' '],
-    post_trial_gap: 2000,
-}
+  choices: [" "],
+  post_trial_gap: 2000,
+};
 
 timeline.push(test_block_1);
 timeline.push(break_block);
@@ -368,8 +400,16 @@ var debrief_block = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `<p>You have completed the experiment. Thank you!</p>
     <p>The experimenter will help you remove the cap and explain the purpose of the experiment.</p>
-    <p>Experimenter: Press the spacebar to exit fullscreen mode after helping the participant leave.</p>`,
-    choices: [' ']
+    <p>Experimenter: Press the spacebar to exit fullscreen mode after helping the participant leave. Then close the browser window.</p>`,
+  choices: [" "],
+  on_finish: function () {
+    document.querySelector("html").classList.remove("hide-cursor");
+  },
+  on_start: function () {
+    jsPsych.data
+      .get()
+      .localSave("json", `subject-${subject_id}-behavioral.json`);
+  },
 };
 
 timeline.push(debrief_block);
