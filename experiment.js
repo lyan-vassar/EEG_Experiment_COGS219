@@ -1,5 +1,5 @@
-var N_PRACTICE_QUESTIONS = 2;
-var N_QUESTIONS_PER_BLOCK = 2;
+var N_PRACTICE_QUESTIONS = 10;
+var N_QUESTIONS_PER_BLOCK = 60;
 
 var test_stimuli = [list_a, list_b, list_c, list_d];
 
